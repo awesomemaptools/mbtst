@@ -2,6 +2,8 @@
 
 // var app = require('./app');
 var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
+// var mapboxgl = require('mapbox-gl/src/index.js');
+// var mapboxgl = require('mapbox-gl');
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiZWxsdnRyemVnIiwiYSI6ImNpejl4M2M0NDAxbWoycXRlanZnc283dnYifQ.sPFCSTsdlCOp1hk6afDvJg';
 var map = new mapboxgl.Map({
