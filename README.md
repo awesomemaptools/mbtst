@@ -32,7 +32,7 @@ Error: Cannot find module './feature' from '/home/jonas/zegeba/repos/mbtst/node_
 ## Working examples:
 Simple DNS solution works in cdn.html.
 
-Comment out the line int src/main.js that requires the mapbox-gl module and bundling works:
+Comment out the line in src/main.js that requires the mapbox-gl module and bundling works:
 ```js
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 ```

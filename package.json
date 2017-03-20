@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node node_modules/http-server/bin/http-server -c-1 -a localhost",
-    "build": "node node_modules/browserify/bin/cmd.js --entry src/main.js --outfile dist/build.js" 
+    "clean": "rm -rf dist/*",
+    "serve": "http-server -c-1 -a localhost",
+    "build": "node node_modules/browserify/bin/cmd.js --entry src/main.js --outfile dist/build.js",
+    "uglify": "node node_modules/uglify-js/bin/uglifyjs dist/build.js -c -o dist/build.min.js",
+    "dist": "npm-run-all clean build uglify serve"
   },
   "author": "ellvtr",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^14.1.0",
     "http-server": "^0.9.0",
-    "mapbox-gl": "^0.34.0"
+    "mapbox-gl": "^0.34.0",
+    "npm-run-all": "^4.0.2",
+    "uglify-js": "^2.8.14"
   }
 }
