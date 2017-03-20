@@ -49,4 +49,4 @@ Currently is works when requiring like this instead:
 var mapboxgl = require('mapbox-gl/src/index.js');
 ```
 
-Include the DNS in index.html and the map renders fine.
+Include the CDN in index.html and the map renders fine.
