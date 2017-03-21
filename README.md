@@ -14,12 +14,12 @@ npm install
 # It actually runs this command:
 # node node_modules/browserify/bin/cmd.js --entry src/main.js --outfile dist/build.js
 
-# Serve files on localhost:
-npm run serve
+# Build files and serve them on localhost:
+npm run test
 ```
 
 ## Bundling fails:
-When requiring mapbox-gl as documented https://www.mapbox.com/mapbox-gl-js/api/ :
+When requiring mapbox-gl in src/main.js as documented https://www.mapbox.com/mapbox-gl-js/api/ :
 ```js
 var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 ```
@@ -27,8 +27,6 @@ var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 Then bundling fails with an error like this:
 ```
 $ ./build.sh 
-# Or to run it all:
-$ npm run test
 Error: Cannot find module './feature' from '/[...]/mbtst/node_modules/mapbox-gl/dist'
     at /[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:55:21
     at load (/[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:69:43)
