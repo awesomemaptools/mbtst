@@ -19,7 +19,8 @@ npm run test
 ```
 
 ## Bundling fails:
-When requiring mapbox-gl in src/main.js as documented https://www.mapbox.com/mapbox-gl-js/api/ :
+When requiring mapbox-gl in src/main.js as documented https://www.mapbox.com/mapbox-gl-js/api/ 
+(at the time this repo was initiated and the issue reported) :
 ```js
 var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 ```
