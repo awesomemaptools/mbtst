@@ -44,10 +44,10 @@ Comment out the line in src/main.js that requires the mapbox-gl module and bundl
 ```js
 // var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 ```
+Then include the CDN in index.html and the map renders fine.
 
-Currently is works when requiring like this instead:
+
+Currently bundling works when requiring like this instead:
 ```js
 var mapboxgl = require('mapbox-gl/src/index.js');
 ```
-
-Include the CDN in index.html and the map renders fine.
