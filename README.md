@@ -27,11 +27,13 @@ var mapboxgl = require('mapbox-gl/dist/mapbox-gl');
 Then bundling fails with an error like this:
 ```
 $ ./build.sh 
-Error: Cannot find module './feature' from '/home/jonas/zegeba/repos/mbtst/node_modules/mapbox-gl/dist'
-    at /home/jonas/zegeba/repos/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:55:21
-    at load (/home/jonas/zegeba/repos/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:69:43)
-    at onex (/home/jonas/zegeba/repos/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:92:31)
-    at /home/jonas/zegeba/repos/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:22:47
+# Or to run it all:
+$ npm run test
+Error: Cannot find module './feature' from '/[...]/mbtst/node_modules/mapbox-gl/dist'
+    at /[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:55:21
+    at load (/[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:69:43)
+    at onex (/[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:92:31)
+    at /[...]/mbtst/node_modules/browser-resolve/node_modules/resolve/lib/async.js:22:47
 ```
 This possible bug is reported to mapbox here:
 https://github.com/mapbox/mapbox-gl-js/issues/4453

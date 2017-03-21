@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist/*",
     "serve": "http-server -c-1 -a localhost",
-    "build": "./build.sh",
+    "build": "node node_modules/browserify/bin/cmd.js --entry src/main.js --outfile dist/build.js",
     "uglify": "node node_modules/uglify-js/bin/uglifyjs dist/build.js -c -o dist/build.min.js",
-    "test": "npm-run-all clean build uglify serve"
+    "dist": "npm-run-all clean build uglify serve"
   },
   "author": "ellvtr",
   "license": "ISC",
